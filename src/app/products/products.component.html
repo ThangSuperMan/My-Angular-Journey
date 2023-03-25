@@ -1,0 +1,22 @@
+<div class="product">
+  <h2>Products</h2>
+  <div>
+    <div class="product__item" *ngFor="let product of products">
+      <a [title]="product.name + ' Details'">
+        {{product.name}}
+      </a>
+      <div>{{product.price}}</div>
+      <!-- Just display if the product.description is not equals a empty string or undefined -->
+      <p *ngIf="product.description">
+        {{product.description}}
+      </p>
+      <button class="button-share" (click)="share()">Share</button>
+
+      <app-product-alert
+        [product]="product"
+        >
+      </app-product-alert>
+
+    </div>
+  </div>
+</div>

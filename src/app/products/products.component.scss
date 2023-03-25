@@ -1,0 +1,15 @@
+.button-share {
+  padding: 1rem 2rem;
+  background-color: lightblue;
+  margin-top: 1rem;
+}
+
+.product {
+  margin-top: 2rem;
+  &__item {
+    border: 1px solid orange;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+}
+
