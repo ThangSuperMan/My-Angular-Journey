@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ProductProps } from '../products';
 
 @Component({
@@ -8,18 +8,6 @@ import { ProductProps } from '../products';
 })
 export class ProductAlertComponent {
   // @Input() product!: ProductProps;
-  // @Input() _product: ProductProps;
-  public myAge: number;
-
-  get getMyAge(): number {
-    return this.myAge;
-  }
-
-  set getMyAge(newAge: number) {
-    this.myAge = newAge;
-  }
-
-  constructor() {
-    this.myAge = 21;
-  }
+  @Input() product: ProductProps | undefined;
+  @Output() notify = new EventEmitter();
 }
